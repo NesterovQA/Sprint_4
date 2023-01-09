@@ -1,0 +1,26 @@
+from selenium.webdriver.common.by import By
+
+
+class OrderPageLocators:
+    WHO_IS_THE_SCOOTER_FOR_LABEL = (By.XPATH, ".//img[@alt='Scooter blueprint']")
+    NAME_FIELD = (By.XPATH, ".//input[@placeholder='* Имя']")
+    SUR_NAME_FIELD = (By.XPATH, ".//input[@placeholder='* Фамилия']")
+    ADDRESS_FIELD = (By.XPATH, ".//input[@placeholder='* Адрес: куда привезти заказ']")
+    METRO_STATION = (By.XPATH, ".//input[@placeholder='* Станция метро']")
+    PHONE_NUMBER_FIELD = (By.XPATH, ".//input[@placeholder='* Телефон: на него позвонит курьер']")
+    NEXT_BUTTON = (By.XPATH, ".//button[text()='Далее']")
+    ORDER_DATE_FIELD = (By.XPATH, ".//input[@placeholder='* Когда привезти самокат']")
+    TIME_RENT = (By.CLASS_NAME, 'Dropdown-placeholder')
+    QUANTITY_DAY = (By.XPATH, './/div[@class="Dropdown-menu"]/div')
+    SQOOTER_COLOR_FIELD = (By.CLASS_NAME, 'Order_Title__3EKne')
+    BLACK_COLOUR_FOR_SQOOTER = (By.ID, 'black')
+    GRAY_COLOUR_FOR_SQOOTER = (By.ID, 'grey')
+    COMMENT_FIELD = (By.XPATH, ".//*[@placeholder='Комментарий для курьера']")
+    ORDER_BUTTON_IN_ORDER = (By.XPATH, ".//button[@class='Button_Button__ra12g Button_Middle__1CSJM']")
+    BACK_BUTTON = (By.XPATH, ".//button[text()='Назад']")
+    CONFIRM_ORDER_BUTTON = (By.XPATH, ".//button[text()='Да']")
+    ORDER_INFO_TABLE = (By.XPATH, ".//div[@class='Order_ModalHeader__3FDaJ']")
+    VIEW_STATUS_ORDER_BUTTON = (By.XPATH, ".//button[text()='Посмотреть статус']")
+    SQOOTER_LOGO = (By.XPATH, ".//a[@href='/']")
+    YANDEX_LOGO = (By.XPATH, ".//img[@alt='Yandex']")
+    DZEN_LOCATOR = (By.XPATH, ".//div[@class='card-news__tabPane-3_ card-news__active-2u']")
