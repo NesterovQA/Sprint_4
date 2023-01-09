@@ -1,3 +1,5 @@
+import time
+
 from pages.order_page import OrderPage
 import allure
 
@@ -25,8 +27,10 @@ class TestOrderPage:
         order_page.accept_cookies()
         order_page.wait_to_visible_sqooter_image_on_main_page()
         order_page.transfer_to_button_order_down()
+        order_page.wait_to_clickabele_order_down_button()
         order_page.click_on_order_button_down()
-        order_page.set_primary_date_for_order('Иван', 'Иванов', 'г.Москва ул.Загородное шоссе д.17.кв 29', 'Комсомольская', '+792539445566')
+        order_page.set_primary_date_for_order('Иван', 'Иванов', 'г.Москва ул.Загородное шоссе д.17.кв 29',
+                                              'Комсомольская', '+792539445566')
         order_page.wait_to_clickabele_back_button()
         order_page.set_secondary_date_for_order('10.02.2023', 'Домофон не работает')
         order_page.click_on_order_button_in_order()
@@ -40,6 +44,7 @@ class TestOrderPage:
         order_page.accept_cookies()
         order_page.wait_to_visible_sqooter_image_on_main_page()
         order_page.transfer_to_button_order_down()
+        order_page.wait_to_clickabele_order_down_button()
         order_page.click_on_order_button_down()
         order_page.click_on_logo_sqooter()
         assert driver.current_url == 'https://qa-scooter.praktikum-services.ru/'
@@ -51,6 +56,7 @@ class TestOrderPage:
         order_page.accept_cookies()
         order_page.wait_to_visible_sqooter_image_on_main_page()
         order_page.transfer_to_button_order_down()
+        order_page.wait_to_clickabele_order_down_button()
         order_page.click_on_order_button_down()
         order_page.click_on_logo_yandex()
         order_page.select_new_windows()

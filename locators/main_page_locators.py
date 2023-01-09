@@ -30,3 +30,4 @@ class MainPageLocators:
     SQOOTER_IMAGE = (By.XPATH, ".//img[@alt='Scooter blueprint']")
     ORDER_PAGE_BUTTON_UP = (By.CLASS_NAME, 'Button_Button__ra12g')
     ORDER_PAGE_BUTTON_DOWN = (By.XPATH, ".//*[@class='Button_Button__ra12g Button_UltraBig__UU3Lp']")
+    ORDER_PAGE_BUTTON_DOWN2 = (By.XPATH, ".//*[@class='Home_FinishButton__1_cWm']/button")

@@ -7,7 +7,8 @@ from selenium.webdriver.firefox.options import Options
 @pytest.fixture(scope='function')
 def driver():
     driver = webdriver.Firefox()
-    driver.set_window_size(1920, 1080)
+    driver.set_window_size(1024, 768)
+    # driver.set_window_size(1920, 1080)
     # firefox_options = Options()
     # firefox_options.add_argument('--window-size=1920,1080')
     yield driver

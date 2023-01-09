@@ -14,7 +14,7 @@ class OrderPage:
         self.driver.find_element(*MainPageLocators.ORDER_PAGE_BUTTON_UP).click()
 
     def click_on_order_button_down(self):
-        self.driver.find_element(*MainPageLocators.ORDER_PAGE_BUTTON_DOWN).click()
+        self.driver.find_element(*MainPageLocators.ORDER_PAGE_BUTTON_DOWN2).click()
 
     def click_on_order_button_in_order(self):
         self.driver.find_element(*OrderPageLocators.ORDER_BUTTON_IN_ORDER).click()
@@ -81,7 +81,7 @@ class OrderPage:
         self.driver.find_element(*OrderPageLocators.VIEW_STATUS_ORDER_BUTTON).click()
 
     def transfer_to_button_order_down(self):
-        element = self.driver.find_element(*MainPageLocators.ORDER_PAGE_BUTTON_DOWN)
+        element = self.driver.find_element(*MainPageLocators.ORDER_PAGE_BUTTON_DOWN2)
         self.driver.execute_script("arguments[0].scrollIntoView();", element)
 
     def click_on_logo_sqooter(self):
@@ -104,3 +104,9 @@ class OrderPage:
 
     def select_new_windows(self):
         self.driver.switch_to.window(self.driver.window_handles[1])
+
+    def scroll_down(self):
+        self.driver.execute_script("window.scrollTo(0, document.body.scrollLow);")
+
+    def wait_to_clickabele_order_down_button(self):
+        WebDriverWait(self.driver, 5).until(expected_conditions.element_to_be_clickable(MainPageLocators.ORDER_PAGE_BUTTON_DOWN2))
